@@ -1,7 +1,7 @@
-defmodule Cerberus.TokenizeTest do
+defmodule Cerberus.TokenizerTest do
   use ExUnit.Case
 
-  import Cerberus.Tokenize
+  import Cerberus.Tokenizer
 
   @xml ~s{
     <?xml version="1.0"?>

@@ -1,4 +1,4 @@
-defmodule Cerberus.Tokenize do
+defmodule Cerberus.Tokenizer do
 
   def tokenize(xml) when is_binary(xml) do
     Regex.split(~r{\n}, xml, trim: true) |> tokenize |> List.flatten
