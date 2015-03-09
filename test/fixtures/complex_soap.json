@@ -1,0 +1,38 @@
+{
+  "ResponseHeader": {
+    "requestId": "xxxxxxxxxxxxxxxxxxxx",
+    "responseTime": 1063
+  },
+  "getAdUnitsByStatementResponse": [
+    {
+    "rval": {
+      "totalResultSetSize": 1,
+      "startIndex": 0,
+      "results": {
+        "id": 2372,
+        "name": "RootAdUnit",
+        "description": "",
+        "targetWindow": "TOP",
+        "status": "ACTIVE",
+        "adUnitCode": 1002372,
+        "inheritedAdSenseSettings": [
+          {
+          "value": {
+            "adSenseEnabled": "true",
+            "borderColor": "#FFFFFF",
+            "titleColor": "#0000FF",
+            "backgroundColor": "#FFFFFF",
+            "textColor": "#000000",
+            "urlColor": "#008000",
+            "adType": "TEXT_AND_IMAGE",
+            "borderStyle": "DEFAULT",
+            "fontFamily": "DEFAULT",
+            "fontSize": "DEFAULT"
+          }
+        }
+        ]
+      }
+    }
+  }
+  ]
+}

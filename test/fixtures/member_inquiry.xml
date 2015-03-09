@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<soapenv:Envelope xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsa="http://www.w3.org/2005/08/addressing">
+  <soapenv:Header>
+    <wsa:To wsu:Id="Id-a8f2df35-fa5a-43a4-91bb-6338a4abb566" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"> http://consumer.registry.aetna.com/WellMatch/1.0</wsa:To>
+    <wsa:Action wsu:Id="Id-27b9f1ce-5381-4046-93c0-a87794541524" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">http://service.registry.aetna.com/MemberInquiry/getMemberByIdWithName/1.1</wsa:Action>
+    <wsa:RelatesTo wsu:Id="Id-73cdf3ba-7fec-4e95-b078-5782f6232eee" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">urn:uuid:</wsa:RelatesTo>
+    <wsa:MessageID wsu:Id="Id-99b8e8e0-cf90-4722-bb1f-f3fe6f342196" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">urn:uuid:1f2fe632-87cd-48f3-9bcb-b97264f8d0ed</wsa:MessageID>
+    <ConsumerResponse wsa:IsReferenceParameter="true" xmlns="http://schema.aetna.com/2008/05/ws/aisb/">
+      <results>
+        <responses>
+          <busResponse>
+            <returnCode>0</returnCode>
+            <reasonCode/>
+            <reasonText/>
+          </busResponse>
+          <svcResponse>
+            <returnCode>0</returnCode>
+            <reasonCode/><reasonText/>
+            <dataLength>38613</dataLength>
+          </svcResponse>
+        </responses>
+        <busTimings>
+          <busInitiationTS>2013-05-30T13:38:41.359999</busInitiationTS>
+          <xprtInitiationTS>2013-05-30T13:38:41.392999</xprtInitiationTS>
+          <terminusInitiationTS>2013-05-30T13:38:41.407083</terminusInitiationTS>
+          <svcInitiationTS>2013-05-30T13:38:41.411658</svcInitiationTS>
+          <svcCompletionTS>2013-05-30T13:38:41.420984</svcCompletionTS>
+          <terminusCompletionTS>2013-05-30T13:38:41.421071</terminusCompletionTS>
+          <xprtCompletionTS>2013-05-30T13:38:41.440999</xprtCompletionTS>
+          <busCompletionTS>2013-05-30T13:38:41.474999</busCompletionTS>
+        </busTimings>
+        <runtimeSpecs>
+          <initiatorSpecs>
+            <javaDetails>
+              <className>J</className>
+              <environmentName>DPInitiator</environmentName>
+            </javaDetails>
+          </initiatorSpecs>
+          <terminusSpecs>
+            <cicsDetails>
+              <sysId>ASJ3</sysId>
+              <tranId>BRBY</tranId>
+              <taskNumber>48879</taskNumber>
+            </cicsDetails>
+          </terminusSpecs>
+        </runtimeSpecs>
+      </results>
+    </ConsumerResponse>
+    <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd">
+    <wsu:Timestamp wsu:Id="Timestamp-f60b40a0-2e4e-4115-bd72-0b862212bc1f" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+      <wsu:Created>2013-05-30T17:38:41Z</wsu:Created>
+      <wsu:Expires>2013-05-30T17:43:41Z</wsu:Expires>
+    </wsu:Timestamp>
+    <wsse:BinarySecurityToken wsu:Id="SecurityToken-14a2c7bc-b1c8-4d7a-9697-9e5efbb290c2" EncodingType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-soap-message-security-1.0#Base64Binary" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">MIIEqjCCA5KgAwIBAgIKJwepawABAAAOzzANBgkqhkiG9w0BAQUFADB3MQswCQYDVQQGEwJVUzETMBEGA1UEChMKQWV0bmEgSW5jLjEoMCYGA1UECxMfR2VvUm9vdCBDZXJ0aWZpY2F0aW9uIEF1dGhvcml0eTEpMCcGA1UEAxMgQWV0bmEgSW5jLiBDZXJ0aWZpY2F0ZSBBdXRob3JpdHkwHhcNMTMwMTI4MjAxODU0WhcNMTUwMTI4MjAxODU0WjBsMQswCQYDVQQGEwJVUzEUMBIGA1UECBMLQ29ubmVjdGljdXQxEzARBgNVBAcTCk1pZGRsZXRvd24xEzARBgNVBAoTCkFldG5hIEluYy4xHTAbBgNVBAMTFEVTRFMud3MucWEuYWV0bmEuY29tMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAqN07N0kEvx3fwnM86Ov76yjFt4Kt1XD8H2QMqQI4N75JP+LKnOZbmJsajfNLRxe4SODJSFUObRcesMYN07GUUCWclMqGkAS2uSeN/1mpRbaLVmUcsQS6Nxsxslqa757B93dTrKRE1HzwkE4ocaSRpJ07dU9Bs44Hi4u+GbHikAaLTrKKCviZwx0248iniC0bxrz/rhiOuqv1JrYnCdddgM2fiRsPDnjAfw5QciOhulNx+lsiqkuCxsYOlOQSE6VgxRbrb2zn9K3suwgA4XRsDNp89CZh15I4UPVC3I7SrczmfizsIS1DJma5mHyFAt6x3wmNr0jlf0fzFCNk9SwedwIDAQABo4IBQTCCAT0wHQYDVR0OBBYEFCq+GxgCu9feAQXg1+gw+Kw1L7obMB8GA1UdIwQYMBaAFL7DxXHIoI1iXT0RMidDMWONKCnBMDEGA1UdHwQqMCgwJqAkoCKGIGh0dHA6Ly9jcmwuYWV0bmEuY29tL2FldG5hY2EuY3JsMDwGCCsGAQUFBwEBBDAwLjAsBggrBgEFBQcwAoYgaHR0cDovL2NybC5hZXRuYS5jb20vYWV0bmFjYS5jcnQwDAYDVR0TAQH/BAIwADALBgNVHQ8EBAMCBaAwPQYJKwYBBAGCNxUHBDAwLgYmKwYBBAGCNxUIhsOqQrfhFoWdnQqDwbBWhIG8RIEchq/ZOoH16VECAWQCAQMwEwYDVR0lBAwwCgYIKwYBBQUHAwEwGwYJKwYBBAGCNxUKBA4wDDAKBggrBgEFBQcDATANBgkqhkiG9w0BAQUFAAOCAQEAFmBpR9E0KtXf9fsZzEg1Q8IJrYmzhQcJ6yDWwwLs7hLziF1W1tQ4YPE+UNaK2NL7NqKdofzNVuQ1YgnU0Su9mJZzW5e8/r82PQuwMRA8m9Shuvc4oCuZG0pT7jYhsPyL8MiFktYE+kzJnAP4WJV7/F4WT0BUDKH1SjKpyKfdawiM43qxPImq8oc1uS7hVgt6mTdxlr26IRAD/mpHbyqJIJrf5WqiljVvrroq7ys7fGBlDFcytrGJt5ldVfOc/53lgJe71Q9BYWSVvlGvfGwJU6AhoyBlzmdFnoDb3wxFcFd85mcRNtPgdIQ2lyyXy/cW8fKFu3fVrv4Y921weTypwQ==</wsse:BinarySecurityToken>
+    <Signature xmlns="http://www.w3.org/2000/09/xmldsig#">
+      <SignedInfo>
+        <CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+        <SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1"/>
+          <Reference URI="#Id-a8f2df35-fa5a-43a4-91bb-6338a4abb566">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/> 
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+            <DigestValue>3UJDbQrpqyZck7OC7oRr03rkqSE=</DigestValue>
+          </Reference>
+          <Reference URI="#Id-27b9f1ce-5381-4046-93c0-a87794541524">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+            <DigestValue>m3NyFYgXLCHJ0J0rfkqvae9RKTg=</DigestValue>
+          </Reference>
+          <Reference URI="#Id-73cdf3ba-7fec-4e95-b078-5782f6232eee">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+            <DigestValue>83e2NWXSK5d2FEs1B3r64LL1OSw=</DigestValue>
+          </Reference>
+          <Reference URI="#Id-99b8e8e0-cf90-4722-bb1f-f3fe6f342196">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+            <DigestValue>FUyLCQ03HAiN0cap8M/fSyDDGLk=</DigestValue>
+          </Reference>
+          <Reference URI="#Id-c4127b18-3a74-448a-9046-6be7e02bd052">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+            <DigestValue>UIbM0CZc4Xjjp3beYoU95m1I4r0=</DigestValue>
+          </Reference>
+          <Reference URI="#Timestamp-f60b40a0-2e4e-4115-bd72-0b862212bc1f">
+            <Transforms>
+              <Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#"/>
+            </Transforms>
+            <DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1"/>
+            <DigestValue>/PKPDUsbbszoL54gIumsDdcqn2k=</DigestValue>
+          </Reference>
+        </SignedInfo>
+        <SignatureValue>KiokWK4vi138Clh3JpIRzBNRKLHY2OObUsSYrxIkUI7sw0KO1qEajVSdeGNfyuel+ZIVCylylFV3MprpwTPL9cyd1f/KaNjqFILvVw+5A6TvJVr5G75fdZ8AaTXLkETqH14ovsCD7iHGDPwjDeqMxOO5MGdBVXY3kbNJqT0Iv5O9Pc6f30nfyncxRKJPfF5HpAvpLMM2jQSjQ4pAdf26lyM9M2RMnbtc5BE7H2SNn+fReIzJAyBdrGf48CyroPVjl0k0OsZgH6XgQvNlsSirVlQSVG/qMrwtvaHTMrOpbHay/l9g5ld3ARApTtd2+i86NQtzlobXxfXSqYKUcgu4KQ==</SignatureValue>
+        <KeyInfo>
+          <wsse:SecurityTokenReference xmlns="">
+          <wsse:Reference URI="#SecurityToken-14a2c7bc-b1c8-4d7a-9697-9e5efbb290c2" ValueType="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-x509-token-profile-1.0#X509v3"/></wsse:SecurityTokenReference>
+        </KeyInfo>
+      </Signature>
+    </wsse:Security>
+  </soapenv:Header>
+  <soapenv:Body wsu:Id="Id-c4127b18-3a74-448a-9046-6be7e02bd052" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+    <tns:getMemberByIdWithNameResponse xmlns:mi="http://schema.aetna.com/2011/08/member/memberInquiry" xmlns:tns="http://schema.aetna.com/2011/08/ws/member/memberInquiry">
+      <mi:memberSearchByIdResult>
+        <mi:memberSearchResultType>
+          <mi:filteringResultCode>MatchedMembersUnverified</mi:filteringResultCode>
+        </mi:memberSearchResultType>
+        <mi:memberGroups>
+          <mi:memberGroup>
+            <mi:member>
+              <mi:name>
+                <mi:firstName>HALEY</mi:firstName>
+                <mi:lastName>MULLEN</mi:lastName>
+              </mi:name>
+              <mi:address>
+                <mi:streetAddressOne>577 CALCULATOR RD.</mi:streetAddressOne>
+                <mi:cityName>LITTLE SWITZERLAND</mi:cityName>
+                <mi:stateCode>NC</mi:stateCode>
+                <mi:zipcode>28749</mi:zipcode>
+                <mi:zipExtension>0000</mi:zipExtension>
+              </mi:address>
+              <mi:dateOfBirth>1983-07-08</mi:dateOfBirth>
+              <mi:claimRelationship>Insured</mi:claimRelationship>
+              <mi:gender>MALE</mi:gender>
+              <mi:cumbId>262834479</mi:cumbId>
+              <mi:cumbIdSequenceNumber>1</mi:cumbIdSequenceNumber>
+              <mi:traditionalControlNumber>0000000</mi:traditionalControlNumber>
+              <mi:relationship>I</mi:relationship>
+            </mi:member>
+            <mi:subscriber>
+              <mi:name>
+                <mi:firstName>HALEY</mi:firstName>
+                <mi:lastName>MULLEN</mi:lastName>
+              </mi:name>
+              <mi:address>
+                <mi:streetAddressOne>577 CALCULATOR RD.</mi:streetAddressOne>
+                <mi:cityName>LITTLE SWITZERLAND</mi:cityName>
+                <mi:stateCode>NC</mi:stateCode>
+                <mi:zipcode>28749</mi:zipcode>
+                <mi:zipExtension>0000</mi:zipExtension>
+              </mi:address>
+              <mi:dateOfBirth>1983-07-08</mi:dateOfBirth>
+              <mi:gender>MALE</mi:gender>
+              <mi:cumbId>262834479</mi:cumbId>
+            </mi:subscriber>
+          </mi:memberGroup>
+        </mi:memberGroups>
+      </mi:memberSearchByIdResult>
+    </tns:getMemberByIdWithNameResponse>
+  </soapenv:Body>
+</soapenv:Envelope>

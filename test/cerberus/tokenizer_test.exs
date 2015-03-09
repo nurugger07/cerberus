@@ -3,29 +3,22 @@ defmodule Cerberus.TokenizerTest do
 
   import Cerberus.Tokenizer
 
-  @xml ~s{
-    <?xml version="1.0"?>
-    <!DOCTYPE book SYSTEM "book.dtd">
-    <book id="bk101">
-      <author>Gambardella, Matthew</author>
-      <price>44.95</price>
-      <publish_date>2012-12-21</publish_date>
-    </book>
-  }
+  @xml File.read!("test/fixtures/books.xml")
+  @soap File.read!("test/fixtures/simple_soap.xml")
+  @memberInquiry File.read!("test/fixtures/member_inquiry.xml")
 
-  @tokens [
-    {:header, "<?xml version=\"1.0\"?>"},
-    {:doctype, "<!DOCTYPE book SYSTEM \"book.dtd\">"},
-    {:start_node, "book", "<book id=\"bk101\">"},
-    {:attribute, "id", "bk101", "<book id=\"bk101\">"},
-    {:element, "author", "Gambardella, Matthew", "<author>Gambardella, Matthew</author>"},
-    {:element, "price", "44.95", "<price>44.95</price>" },
-    {:element, "publish_date", "2012-12-21", "<publish_date>2012-12-21</publish_date>"},
-    {:end_node, "book", "</book>"}
-  ]
-
-  test "tokenize XML" do
-    assert @tokens == (tokenize @xml)
+  test "tokenize simple XML" do
+    tokens = to_string(inspect tokenize @xml)
+    assert File.read!("test/fixtures/books.exs") == tokens
   end
 
+  test "tokenize simple SOAP" do
+    tokens = to_string(inspect tokenize @soap)
+    assert File.read!("test/fixtures/simple_soap.exs") == tokens
+  end
+
+  test "tokenize memberInquiry SOAP response" do
+    tokens = to_string(inspect tokenize @memberInquiry)
+    assert File.read!("test/fixtures/member_inquiry.exs") == tokens
+  end
 end

@@ -1,7 +1,5 @@
-defmodule Cerberus.CompilerTest do
+defmodule Cerberus.ParserTest do
   use ExUnit.Case
-
-  import Cerberus.Compiler
 
   @tokens [
     {:header, "<?xml version=\"1.0\"?>"},
@@ -24,32 +22,5 @@ defmodule Cerberus.CompilerTest do
     {:soap, "</soap:Body>"},
     {:soap, "</soap:Envelope>"}
   ]
-
-  @json Regex.replace(~r/(^\s*)|(\s+$)|(\n)/m, ~s{
-    \{
-      "book": \{
-        "id": "bk101",
-        "author": "Gambardella, Matthew",
-        "price": 44.95,
-        "publish_date": "2012-12-21"
-      \}
-    \}
-  }, "")
-
-  @soap_json Regex.replace(~r/(^\s*)|(\s+$)|(\n)/m, ~s{
-    \{
-      "GetStockPriceResponse": \{
-        "Price": 34.5
-      \}
-    \}
-  }, "")
-
-  # test "compile tokens to JSON" do
-  #   assert @json == (compile @tokens)
-  # end
-
-  # test "compile SOAP tokens to JSON" do
-  #   assert @soap_json == (compile @soap_tokens)
-  # end
 
 end
